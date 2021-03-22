@@ -53,7 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				8C538E4F2607DA0D0094918A /* Culminating2021App.swift */,
-				8C538E512607DA0D0094918A /* ContentView.swift */,
+				8C538E5F2607E58C0094918A /* Views */,
 				8C538E532607DA140094918A /* Assets.xcassets */,
 				8C538E582607DA140094918A /* Info.plist */,
 				8C538E552607DA140094918A /* Preview Content */,
@@ -67,6 +67,14 @@
 				8C538E562607DA140094918A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8C538E5F2607E58C0094918A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8C538E512607DA0D0094918A /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
