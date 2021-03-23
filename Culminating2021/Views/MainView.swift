@@ -16,7 +16,11 @@ struct MainView: View {
                 }
             ChartView()
                 .tabItem {
-                    Label("Chart", Image: "chart")
+                    Label("Chart", systemImage: "chart.pie")
+                }
+            PersonView()
+                .tabItem {
+                    Label("Person", systemImage: "person.fill")
                 }
         
         }

@@ -16,6 +16,8 @@
 		8C6D20F92608EB0000CFAC9A /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6D20F82608EB0000CFAC9A /* PersonView.swift */; };
 		8C6D20FC2608EB0E00CFAC9A /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6D20FB2608EB0E00CFAC9A /* InformationView.swift */; };
 		8C6D20FF2608F34B00CFAC9A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6D20FE2608F34B00CFAC9A /* MainView.swift */; };
+		8C6D21032609642800CFAC9A /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6D21022609642800CFAC9A /* AddView.swift */; };
+		8C6D210826097A6500CFAC9A /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6D210726097A6500CFAC9A /* EditView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		8C6D20F82608EB0000CFAC9A /* PersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonView.swift; sourceTree = "<group>"; };
 		8C6D20FB2608EB0E00CFAC9A /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
 		8C6D20FE2608F34B00CFAC9A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		8C6D21022609642800CFAC9A /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		8C6D210726097A6500CFAC9A /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 				8C538E512607DA0D0094918A /* ContentView.swift */,
 				8C6D20FE2608F34B00CFAC9A /* MainView.swift */,
 				8C6D20F22608EAE700CFAC9A /* HomeView.swift */,
+				8C6D210726097A6500CFAC9A /* EditView.swift */,
+				8C6D21022609642800CFAC9A /* AddView.swift */,
 				8C6D20F52608EAF400CFAC9A /* ChartView.swift */,
 				8C6D20F82608EB0000CFAC9A /* PersonView.swift */,
 				8C6D20FB2608EB0E00CFAC9A /* InformationView.swift */,
@@ -165,6 +171,8 @@
 				8C6D20FF2608F34B00CFAC9A /* MainView.swift in Sources */,
 				8C6D20F32608EAE700CFAC9A /* HomeView.swift in Sources */,
 				8C538E522607DA0D0094918A /* ContentView.swift in Sources */,
+				8C6D21032609642800CFAC9A /* AddView.swift in Sources */,
+				8C6D210826097A6500CFAC9A /* EditView.swift in Sources */,
 				8C6D20FC2608EB0E00CFAC9A /* InformationView.swift in Sources */,
 				8C538E502607DA0D0094918A /* Culminating2021App.swift in Sources */,
 				8C6D20F62608EAF400CFAC9A /* ChartView.swift in Sources */,
