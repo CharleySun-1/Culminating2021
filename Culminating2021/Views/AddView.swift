@@ -26,10 +26,12 @@ struct AddView: View {
                 Form {
                     TextField("Description", text: $description)
                     
-                    Picker("Category", selection: $ItemCategory) {
-                        ForEach(Self.category, id: \.self) {
-                            Text($0)
-                        }
+                    Picker("Priority", selection: $category) {
+                        Text(ItemCategory.business.rawValue).tag(ItemCategory.business)
+                        Text(ItemCategory.personal.rawValue).tag(ItemCategory.personal)
+                        Text(ItemCategory.online.rawValue).tag(ItemCategory.online)
+                        Text(ItemCategory.food.rawValue).tag(ItemCategory.food)
+                        Text(ItemCategory.travel.rawValue).tag(ItemCategory.travel)
                     }
                     
                 }
