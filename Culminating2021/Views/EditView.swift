@@ -9,9 +9,9 @@ import SwiftUI
 
 struct EditView: View {
     @ObservedObject var expenses: Expenses
-    @State private var name = ""
-    @State private var type = "Personal"
-    @State private var amount = ""
+    @Binding private var name = ""
+    @Binding private var type = "Personal"
+    @Binding private var amount = ""
     @Environment(\.presentationMode) var presentationMode
 
     static let types = ["Business", "Personal"]
@@ -32,7 +32,6 @@ struct EditView: View {
             .navigationBarItems(trailing: Button("Save") {
                 if let actualAmount = Int(self.amount) {
                     let item = ExpenseItem(name: self.name, type: self.type, amount: actualAmount)
-                    self.expenses.items.append(item)
                 }
             }
             )

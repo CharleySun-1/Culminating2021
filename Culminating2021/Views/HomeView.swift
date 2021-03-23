@@ -56,12 +56,13 @@ struct HomeView: View {
                     }
                     .onTapGesture(perform: {
                         action: do {
-                            self.showingAddExpense = true
+                            self.showingEditBar = true
                         }
                     })
                     .sheet(isPresented: $showingEditBar) {
                         EditView(expenses: self.expenses)
                     }
+                    
                 }
                 .onDelete(perform: removeItems)
             }

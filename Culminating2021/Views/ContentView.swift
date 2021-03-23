@@ -17,7 +17,7 @@ struct ContentView: View {
             
             Spacer()
             
-            CustomTabs(index: self.$index)
+        
         }
         .background(Color.black.opacity(0.05).edgesIgnoringSafeArea(.top))
     }
@@ -29,79 +29,6 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct CustomTabs : View {
-    
-    @Binding var index : Int
-    
-    var body : some View {
-        
-        HStack{
-            
-            Button(action: {
-                
-                self.index = 0
-                
-            }) {
-                
-                Image("home")
-            }
-            
-            .foregroundColor(Color.black.opacity(self.index == 0 ? 1 : 0.2))
-            .offset(x: -20)
-            
-            Spacer(minLength: 0)
-            Button(action: {
-                
-                self.index = 1
-                
-            }) {
-                
-                Image("chart")
-            }
-            .foregroundColor(Color.black.opacity(self.index == 1 ? 1 : 0.2))
-            .offset(x: -20)
-            Spacer(minLength: 0)
-            
-            Button(action: {
-                
-            }) {
-                
-                Image("add").renderingMode(.original)
-            }
-            
-            .offset(x: 3)
-           
-            Spacer(minLength: 0)
-            
-            Button(action: {
-                
-                self.index = 3
-                
-            }) {
-                
-                Image("person")
-            }
-            .foregroundColor(Color.black.opacity(self.index == 2 ? 1 : 0.2))
-            .offset(x: 20)
-            
-            Spacer(minLength: 0)
-            Button(action: {
-                
-                self.index = 0
-                
-            }) {
-                
-                Image("information")
-            }
-            .foregroundColor(Color.black.opacity(self.index == 3 ? 1 : 0.2))
-            .offset(x: 20)
-            
-        }
-        
-        
-        .padding(.horizontal, 35)
-        .background(Color.white)
-    }
-}
+
 
 
