@@ -1,49 +1,66 @@
 //
-//  AddView.swift
-//  Culminating2021
+//  AddTask.swift
+//  Culminating project
 //
-//  Created by Charley Sun on 2021-03-22.
+//  Created by Charley Sun on 2021-03-19.
 //
 
 import SwiftUI
 
 struct AddView: View {
-    @ObservedObject var expenses: Expenses
-    @State private var name = ""
-    @State private var type = "Personal"
-    @State private var amount = ""
-    @Environment(\.presentationMode) var presentationMode
-
-    static let types = ["Business", "Personal"]
+    
+    // Get a reference to the store of tasks (TaskStore)
+    @ObservedObject var store: ItemStore
+    
+    // Details of the new task
+    @State private var description = ""
+    @State private var category = ItemCategory.business
+    @State private var cost = 0.0
+    
+    // Whether to show this view
+    @Binding var showing: Bool
     
     var body: some View {
         NavigationView {
-            Form {
-                TextField("Name", text: $name)
-                Picker("Type", selection: $type) {
-                    ForEach(Self.types, id: \.self) {
-                        Text($0)
+            VStack {
+                Form {
+                    TextField("Description", text: $description)
+                    
+                    Picker("Category", selection: $ItemCategory) {
+                        ForEach(Self.category, id: \.self) {
+                            Text($0)
+                        }
+                    }
+                    
+                }
+            }
+            .navigationTitle("New expense")
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button("Save") {
+                        saveItem()
                     }
                 }
-                TextField("Amount", text: $amount)
-                    .keyboardType(.numberPad)
             }
-            .navigationBarTitle("Add new expense")
-            .navigationBarItems(trailing: Button("Save") {
-                if let actualAmount = Int(self.amount) {
-                    let item = ExpenseItem(name: self.name, type: self.type, amount: actualAmount)
-                    self.expenses.items.append(item)
-                }
-            }
-            )
         }
+    }
+    
+    func saveItem() {
+        
+        //Add the task to the list of tasks
+        store.items.append(Item(description: description,
+                                category: category,
+                                cost: cost,
+                                completed: false))
+        
+        // Dismiss this view
+        showing = false
+    
     }
 }
 
 struct AddView_Previews: PreviewProvider {
     static var previews: some View {
-        AddView(expenses: Expenses())
+        AddView(store:itemStore, showing: .constant(true))
     }
 }
-
-

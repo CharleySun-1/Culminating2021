@@ -18,6 +18,10 @@
 		8C6D20FF2608F34B00CFAC9A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6D20FE2608F34B00CFAC9A /* MainView.swift */; };
 		8C6D21032609642800CFAC9A /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6D21022609642800CFAC9A /* AddView.swift */; };
 		8C6D210826097A6500CFAC9A /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6D210726097A6500CFAC9A /* EditView.swift */; };
+		8C6D2118260A689700CFAC9A /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6D2117260A689700CFAC9A /* TaskCell.swift */; };
+		8C6D211C260A690C00CFAC9A /* ItemCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6D211B260A690C00CFAC9A /* ItemCategory.swift */; };
+		8C6D2121260A692500CFAC9A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6D2120260A692500CFAC9A /* Item.swift */; };
+		8C6D2125260A693900CFAC9A /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6D2124260A693900CFAC9A /* ItemStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		8C6D20FE2608F34B00CFAC9A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		8C6D21022609642800CFAC9A /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		8C6D210726097A6500CFAC9A /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		8C6D2117260A689700CFAC9A /* TaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		8C6D211B260A690C00CFAC9A /* ItemCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCategory.swift; sourceTree = "<group>"; };
+		8C6D2120260A692500CFAC9A /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		8C6D2124260A693900CFAC9A /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +76,9 @@
 			children = (
 				8C538E4F2607DA0D0094918A /* Culminating2021App.swift */,
 				8C538E5F2607E58C0094918A /* Views */,
-				8C538E532607DA140094918A /* Assets.xcassets */,
+				8C6D210D260A684B00CFAC9A /* Models */,
 				8C538E582607DA140094918A /* Info.plist */,
+				8C538E532607DA140094918A /* Assets.xcassets */,
 				8C538E552607DA140094918A /* Preview Content */,
 			);
 			path = Culminating2021;
@@ -90,12 +99,23 @@
 				8C6D20FE2608F34B00CFAC9A /* MainView.swift */,
 				8C6D20F22608EAE700CFAC9A /* HomeView.swift */,
 				8C6D21022609642800CFAC9A /* AddView.swift */,
+				8C6D2117260A689700CFAC9A /* TaskCell.swift */,
 				8C6D210726097A6500CFAC9A /* EditView.swift */,
 				8C6D20F52608EAF400CFAC9A /* ChartView.swift */,
 				8C6D20F82608EB0000CFAC9A /* PersonView.swift */,
 				8C6D20FB2608EB0E00CFAC9A /* InformationView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8C6D210D260A684B00CFAC9A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8C6D2120260A692500CFAC9A /* Item.swift */,
+				8C6D211B260A690C00CFAC9A /* ItemCategory.swift */,
+				8C6D2124260A693900CFAC9A /* ItemStore.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,11 +190,15 @@
 				8C6D20F92608EB0000CFAC9A /* PersonView.swift in Sources */,
 				8C6D20FF2608F34B00CFAC9A /* MainView.swift in Sources */,
 				8C6D20F32608EAE700CFAC9A /* HomeView.swift in Sources */,
+				8C6D211C260A690C00CFAC9A /* ItemCategory.swift in Sources */,
+				8C6D2121260A692500CFAC9A /* Item.swift in Sources */,
 				8C538E522607DA0D0094918A /* ContentView.swift in Sources */,
 				8C6D21032609642800CFAC9A /* AddView.swift in Sources */,
 				8C6D210826097A6500CFAC9A /* EditView.swift in Sources */,
 				8C6D20FC2608EB0E00CFAC9A /* InformationView.swift in Sources */,
+				8C6D2125260A693900CFAC9A /* ItemStore.swift in Sources */,
 				8C538E502607DA0D0094918A /* Culminating2021App.swift in Sources */,
+				8C6D2118260A689700CFAC9A /* TaskCell.swift in Sources */,
 				8C6D20F62608EAF400CFAC9A /* ChartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
