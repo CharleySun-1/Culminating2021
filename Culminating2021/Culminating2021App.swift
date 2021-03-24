@@ -15,8 +15,26 @@ struct Culminating2021App: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                MainView(store: store)
+
+            TabView {
+                
+                NavigationView {
+                    HomeView(store: store)
+                }
+                .tabItem {
+                    Label("Home", systemImage: "list.dash")
+                }
+
+                ChartView()
+                .tabItem {
+                    Label("Chart", systemImage: "chart.pie")
+                }
+
+                PersonView()
+                .tabItem {
+                    Label("Profile", systemImage: "person.fill")
+                }
+                
             }
         }
     }

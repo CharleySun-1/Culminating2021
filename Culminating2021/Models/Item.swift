@@ -26,6 +26,6 @@ class Item: Identifiable, ObservableObject {
 }
 
 let testData = [
-    Item(description: "Grow long hair", category: ItemCategory.food, cost: "100", completed: true),
+    Item(description: "Ice cream", category: ItemCategory.food, cost: "5", completed: true),
   
 ]
