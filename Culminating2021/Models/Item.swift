@@ -12,10 +12,10 @@ class Item: Identifiable, ObservableObject {
     var id = UUID()
     var description: String
     var category: ItemCategory
-    var cost: Double
+    var cost: String
     @Published var completed: Bool
     
-    internal init(id: UUID = UUID(), description: String, category: ItemCategory, cost: Double, completed: Bool) {
+    internal init(id: UUID = UUID(), description: String, category: ItemCategory, cost: String, completed: Bool) {
         self.id = id
         self.description = description
         self.category = category
@@ -25,7 +25,7 @@ class Item: Identifiable, ObservableObject {
     
 }
 
-let itemData = [
-    Item(description: "Grow long hair", category: ItemCategory.food, cost: 100, completed: true),
+let testData = [
+    Item(description: "Grow long hair", category: ItemCategory.food, cost: "100", completed: true),
   
 ]

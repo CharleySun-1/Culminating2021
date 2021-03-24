@@ -95,14 +95,11 @@
 		8C538E5F2607E58C0094918A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8C538E512607DA0D0094918A /* ContentView.swift */,
 				8C6D20FE2608F34B00CFAC9A /* MainView.swift */,
-				8C6D20F22608EAE700CFAC9A /* HomeView.swift */,
-				8C6D21022609642800CFAC9A /* AddView.swift */,
-				8C6D2117260A689700CFAC9A /* TaskCell.swift */,
-				8C6D210726097A6500CFAC9A /* EditView.swift */,
-				8C6D20F52608EAF400CFAC9A /* ChartView.swift */,
-				8C6D20F82608EB0000CFAC9A /* PersonView.swift */,
+				8C538E512607DA0D0094918A /* ContentView.swift */,
+				8C6D2129260ACA4800CFAC9A /* Home */,
+				8C6D212C260ACA8900CFAC9A /* Chart */,
+				8C6D212F260ACAA000CFAC9A /* Person */,
 				8C6D20FB2608EB0E00CFAC9A /* InformationView.swift */,
 			);
 			path = Views;
@@ -116,6 +113,33 @@
 				8C6D2124260A693900CFAC9A /* ItemStore.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8C6D2129260ACA4800CFAC9A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8C6D20F22608EAE700CFAC9A /* HomeView.swift */,
+				8C6D21022609642800CFAC9A /* AddView.swift */,
+				8C6D210726097A6500CFAC9A /* EditView.swift */,
+				8C6D2117260A689700CFAC9A /* TaskCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8C6D212C260ACA8900CFAC9A /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				8C6D20F52608EAF400CFAC9A /* ChartView.swift */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
+		8C6D212F260ACAA000CFAC9A /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				8C6D20F82608EB0000CFAC9A /* PersonView.swift */,
+			);
+			path = Person;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

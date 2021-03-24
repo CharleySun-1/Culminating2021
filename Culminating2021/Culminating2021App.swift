@@ -1,17 +1,23 @@
 //
-//  Culminating2021App.swift
-//  Culminating2021
+//  Culminating_projectApp.swift
+//  Culminating project
 //
-//  Created by Charley Sun on 2021-03-21.
+//  Created by Charley Sun on 2021-03-17.
 //
 
 import SwiftUI
 
 @main
 struct Culminating2021App: App {
+    
+    @StateObject private var store = ItemStore(items: testData)
+    
+    
     var body: some Scene {
         WindowGroup {
-            MainView()
+            NavigationView {
+                MainView(store: store)
+            }
         }
     }
 }

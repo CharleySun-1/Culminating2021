@@ -15,7 +15,7 @@ struct AddView: View {
     // Details of the new task
     @State private var description = ""
     @State private var category = ItemCategory.business
-    @State private var cost = 0.0
+    @State private var cost = ""
     
     // Whether to show this view
     @Binding var showing: Bool
@@ -26,13 +26,17 @@ struct AddView: View {
                 Form {
                     TextField("Description", text: $description)
                     
-                    Picker("Priority", selection: $category) {
+                    Picker("Category", selection: $category) {
                         Text(ItemCategory.business.rawValue).tag(ItemCategory.business)
                         Text(ItemCategory.personal.rawValue).tag(ItemCategory.personal)
                         Text(ItemCategory.online.rawValue).tag(ItemCategory.online)
                         Text(ItemCategory.food.rawValue).tag(ItemCategory.food)
                         Text(ItemCategory.travel.rawValue).tag(ItemCategory.travel)
+                        
+                    
                     }
+                    TextField("Cost", text: $cost)
+                    
                     
                 }
             }
@@ -63,6 +67,6 @@ struct AddView: View {
 
 struct AddView_Previews: PreviewProvider {
     static var previews: some View {
-        AddView(store:itemStore, showing: .constant(true))
+        AddView(store:testStore, showing: .constant(true))
     }
 }

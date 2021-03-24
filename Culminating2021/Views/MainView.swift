@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    @ObservedObject var store: ItemStore
+    
     var body: some View {
         TabView {
-            HomeView()
+            HomeView(store: store)
                 .tabItem {
                     Label("Home", systemImage: "list.dash")
                 }
@@ -29,7 +32,7 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainView(store: testStore)
         
     }
 }

@@ -15,4 +15,4 @@ class ItemStore: ObservableObject {
     }
 }
 
-let itemStore = ItemStore(tasks: itemData)
+let testStore = ItemStore(items: testData)
