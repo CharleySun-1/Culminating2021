@@ -33,7 +33,9 @@ struct AddView: View {
                         Text(ItemCategory.food.rawValue).tag(ItemCategory.food)
                         Text(ItemCategory.travel.rawValue).tag(ItemCategory.travel)
                         
-                    
+                       
+                        
+                        
                     }
                     TextField("Cost", text: $cost)
                     
