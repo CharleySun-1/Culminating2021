@@ -10,9 +10,9 @@ import Foundation
 class Item: Identifiable, ObservableObject {
    
     var id = UUID()
-    var description: String
-    var category: ItemCategory
-    var cost: String
+    @Published var description: String
+    @Published var category: ItemCategory
+    @Published var cost: String
     @Published var completed: Bool
     
     internal init(id: UUID = UUID(), description: String, category: ItemCategory, cost: String, completed: Bool) {

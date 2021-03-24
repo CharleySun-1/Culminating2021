@@ -6,30 +6,35 @@ struct HomeView: View {
     @ObservedObject var store: ItemStore
     
     // Controls whether the add task is showing
-    @State private var showingAddTask = false
+    @State private var showingAddItem = false
     
     
     var body: some View {
         
         List {
             ForEach(store.items) { item in
-                ItemCell(item: item)
+                
+                NavigationLink(
+                    destination: EditView(item: item)) {
+                        ItemCell(item: item)
+
+                    }
+                
             }
             .onDelete(perform: deleteItems)
             
         }
-        .sheet(isPresented: $showingAddTask) {
-            AddView(store: store, showing: $showingAddTask)
+        .sheet(isPresented: $showingAddItem) {
+            AddView(store: store, showing: $showingAddItem)
         }
         .navigationTitle("Expenses")
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
                 Button("Add") {
-                    showingAddTask = true
+                    showingAddItem = true
                 }
             }
         }
-        
     }
     
     func deleteItems(at offsets: IndexSet) {
