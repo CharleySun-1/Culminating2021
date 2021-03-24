@@ -49,7 +49,13 @@ struct AddView: View {
                         saveItem()
                     }
                 }
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button("Cancel") {
+                        cancelItem()
+                    }
+                }
             }
+            
         }
     }
     
@@ -65,7 +71,16 @@ struct AddView: View {
         showing = false
     
     }
+    
+    
+    func cancelItem() {
+        // Dismiss this view
+        showing = false
+    
+    }
 }
+
+
 
 struct AddView_Previews: PreviewProvider {
     static var previews: some View {

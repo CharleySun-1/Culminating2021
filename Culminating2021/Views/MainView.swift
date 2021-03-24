@@ -23,7 +23,7 @@ struct MainView: View {
                 }
             PersonView()
                 .tabItem {
-                    Label("Person", systemImage: "person.fill")
+                    Label("Profile", systemImage: "person.fill")
                 }
         
         }
